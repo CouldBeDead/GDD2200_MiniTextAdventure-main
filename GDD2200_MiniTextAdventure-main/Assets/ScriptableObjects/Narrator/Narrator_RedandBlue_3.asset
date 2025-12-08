@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Narrator_RedandBlue_3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: RedandBlue_3 1
+  SpeakerName: Narrator
+  DialogueText: "Perhaps I wasn\u2019t clear. For the sake of a smooth and safe experience,
+    you, the player, are to follow my directions.\r\nMaybe you got your colors mixed
+    up, or perhaps curiosity got the better of you. It happens to the best of us.\r\nSo,
+    why don\u2019t we try this again, hm? Go on - the red door, please. Let\u2019s
+    not make this harder than it needs to be.\r\n\r\n\r\n"
+  Choices:
+  - ChoiceText: Next
+    NextNodeId: RedandBlue_3 2
+    ReloadScene: 0
+    RequiredFlags:
+    - BlueDoor_2
+    ForbiddenFlags: []
+    GrantFlags: []

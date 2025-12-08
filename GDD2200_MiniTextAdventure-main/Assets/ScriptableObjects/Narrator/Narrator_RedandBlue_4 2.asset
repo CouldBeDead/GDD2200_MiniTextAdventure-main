@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Narrator_RedandBlue_4 2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: RedandBlue_4 2
+  SpeakerName: Narrator
+  DialogueText: "Luck for you I understand. For some people, context clues can be
+    hard. Maybe you don\u2019t understand English. That's okay, I will give you one
+    more chance and translate myself into Spanish. Like your brain, my Spanish may
+    be a bit rusty\u2026 and SLOW.\n"
+  Choices:
+  - ChoiceText: Next
+    NextNodeId: RedandBlue_4 3
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []
