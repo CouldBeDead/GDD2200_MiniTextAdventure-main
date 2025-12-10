@@ -152,9 +152,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1719944333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1293.2, y: -178.94}
   m_SizeDelta: {x: 536.48, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &314465532
@@ -311,7 +311,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,9 +838,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1719944333}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 268.24, y: -183.19}
   m_SizeDelta: {x: 536.48, y: 41.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1126003877
@@ -993,7 +993,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719944332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
@@ -1289,9 +1289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4feae10f8f686c4590791bafc77cb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  Database: {fileID: 11400000, guid: e0e61d6039a5c5e448aec5b907a6e4c3, type: 2}
+  Database: {fileID: 11400000, guid: 00ce2871f0dde7f40ab7f34c59224dff, type: 2}
   FlagManager: {fileID: 1189913948}
-  StartNodeId: RedandBlue_1
+  StartNodeId: Chicken or Beef intro
   StartedFromSave: 0
 --- !u!4 &1753044070
 Transform:
@@ -1389,7 +1389,6 @@ MonoBehaviour:
   ButtonLabels:
   - {fileID: 1126003878}
   - {fileID: 314465533}
-  TypeSpeed: 0.03
 --- !u!223 &1939522764
 Canvas:
   m_ObjectHideFlags: 0
@@ -1425,10 +1424,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1711475785}
   - {fileID: 1080920233}
   - {fileID: 542398941}
   - {fileID: 1719944333}
-  - {fileID: 1711475785}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

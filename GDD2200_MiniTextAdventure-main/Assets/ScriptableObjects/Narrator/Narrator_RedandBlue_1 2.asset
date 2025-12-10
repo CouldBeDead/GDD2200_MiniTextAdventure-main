@@ -15,20 +15,19 @@ MonoBehaviour:
   NodeId: RedandBlue_1 2
   SpeakerName: Narrator
   DialogueText: "Now then - let\u2019s start simple with a practice round. From the
-    top! (Clears throat)\r\n\r\nWith the player faced with two doors, one red, one
-    blue, they stepped through the red door excited to start their adventure."
+    top!\r\n\r\nWith the player faced with two doors, one red, one blue, they stepped
+    through the red door excited to start their adventure."
   Choices:
   - ChoiceText: Red Door
-    NextNodeId: RedandBlue_1
+    NextNodeId: 
     SceneChangeAsset: {fileID: 0}
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags:
-    - cp_Reddoor
+    GrantFlags: []
   - ChoiceText: Blue Door
     NextNodeId: RedandBlue_2
     SceneChangeAsset: {fileID: 0}
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags:
-    - cp_BlueDoor_1
+    - BlueDoor_1

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e649038d9e1dfc249a980e57c5b5a9b6, type: 3}
+  m_Name: ChickenorBeef Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueDatabase
+  Nodes:
+  - {fileID: 11400000, guid: 13e89c875a2c09d46ac7cdb6066d5c9d, type: 2}
+  - {fileID: 11400000, guid: 6ff0a480a17432b42a42ec539b4391b5, type: 2}
+  - {fileID: 11400000, guid: f2cee80c38037144cab9fbbd987b0867, type: 2}
+  - {fileID: 11400000, guid: c89285c22814c7545b193d2665a70b00, type: 2}
+  - {fileID: 11400000, guid: 3296f17d6c52a13458366bd2493cd03d, type: 2}
+  - {fileID: 11400000, guid: 5f665164dacd67b469f888c1649588ef, type: 2}

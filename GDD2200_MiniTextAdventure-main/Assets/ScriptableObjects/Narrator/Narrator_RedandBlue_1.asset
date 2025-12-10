@@ -19,7 +19,7 @@ MonoBehaviour:
   Choices:
   - ChoiceText: Next
     NextNodeId: RedandBlue_1 1
-    ReloadScene: 0
+    SceneChangeAsset: {fileID: 0}
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []

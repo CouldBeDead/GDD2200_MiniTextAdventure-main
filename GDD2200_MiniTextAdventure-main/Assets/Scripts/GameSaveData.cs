@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 
-// This is what we serialize to JSON
-[Serializable]
+[System.Serializable]
 public class GameSaveData
 {
-    public List<string> flags = new();
+    public List<string> flags = new List<string>();
+    public string currentNodeId;
 }

@@ -7,7 +7,7 @@ public static class JsonSaveSystem
     private static string SavePath =>
         Path.Combine(Application.persistentDataPath, "save.json");
 
-    public static void Save(FlagManager flagManager)
+    public static void Save(FlagManager flagManager, string currentNodeId)
     {
         if (flagManager == null)
         {
@@ -17,17 +17,19 @@ public static class JsonSaveSystem
 
         var data = new GameSaveData
         {
-            flags = flagManager.GetAllFlags()
+            flags = flagManager.GetAllFlags(),
+            currentNodeId = currentNodeId
         };
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(SavePath, json);
+
         Debug.Log($"[JsonSaveSystem] Saved to {SavePath}");
     }
 
-    public static bool TryLoad(out List<string> flags)
+    public static bool TryLoad(out GameSaveData data)
     {
-        flags = null;
+        data = null;
 
         if (!File.Exists(SavePath))
         {
@@ -36,17 +38,19 @@ public static class JsonSaveSystem
         }
 
         string json = File.ReadAllText(SavePath);
-        var data = JsonUtility.FromJson<GameSaveData>(json);
+        data = JsonUtility.FromJson<GameSaveData>(json);
 
         if (data == null)
         {
-            Debug.LogWarning("[JsonSaveSystem] Failed to parse save file.");
-            flags = new List<string>();
+            Debug.LogWarning("[JsonSaveSystem] Failed to parse save file. Returning empty save.");
+            data = new GameSaveData();
             return false;
         }
 
-        flags = data.flags ?? new List<string>();
-        Debug.Log($"[JsonSaveSystem] Loaded {flags.Count} flags from save.");
+        if (data.flags == null)
+            data.flags = new List<string>();
+
+        Debug.Log($"[JsonSaveSystem] Loaded {data.flags.Count} flags. Node = '{data.currentNodeId}'");
         return true;
     }
 

@@ -19,13 +19,13 @@ MonoBehaviour:
   Choices:
   - ChoiceText: Red Door
     NextNodeId: 
-    ReloadScene: 0
+    SceneChangeAsset: {fileID: 11400000, guid: 5fd83e6c72be12447b69812535fc19d7, type: 2}
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []
   - ChoiceText: Blue Door
     NextNodeId: RedandBlue_4
-    ReloadScene: 0
+    SceneChangeAsset: {fileID: 0}
     RequiredFlags:
     - BlueDoor_2
     ForbiddenFlags: []

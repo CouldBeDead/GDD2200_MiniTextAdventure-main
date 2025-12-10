@@ -21,7 +21,7 @@ MonoBehaviour:
   Choices:
   - ChoiceText: PUERTA ROJA
     NextNodeId: 
-    SceneChangeAsset: {fileID: 0}
+    SceneChangeAsset: {fileID: 11400000, guid: 5fd83e6c72be12447b69812535fc19d7, type: 2}
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []

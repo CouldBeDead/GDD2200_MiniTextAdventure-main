@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Parable Ending.unity
     guid: 1559ebf9551abb748b8114b6e15b899a
+  - enabled: 1
+    path: Assets/Scenes/Chicken_or_Beef.unity
+    guid: 357c3ed0b10150a48b7bb82cc0d95338
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   NodeId: RedandBlue_4
   SpeakerName: Desc
-  DialogueText: You once again walk into the same room. Presented with a red door
+  DialogueText: 1 You once again walk into the same room. Presented with a red door
     and a blue door.
   Choices:
   - ChoiceText: Next
     NextNodeId: RedandBlue_4 1
-    ReloadScene: 0
+    SceneChangeAsset: {fileID: 0}
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: Desc RedandBlue_2
+  m_Name: ChickenBeef5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: RedandBlue_2
-  SpeakerName: Desc
-  DialogueText: You walk through the blue door, into an identical room. Presented
-    with once again a red and blue door.
+  NodeId: ChickenBeef_5
+  SpeakerName: Narrator
+  DialogueText: "Here in parkour Civilization no one chooses to jump for the beef.
+    \nKnowing this, our player rationally decided to jump for the chicken.\r\n"
   Choices:
   - ChoiceText: Next
-    NextNodeId: RedandBlue_2 1
+    NextNodeId: 
     SceneChangeAsset: {fileID: 0}
     RequiredFlags: []
     ForbiddenFlags: []
