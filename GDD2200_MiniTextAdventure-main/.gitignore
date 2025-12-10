@@ -1,4 +1,4 @@
-git rm -r --cached GDD2200_MiniTextAdventure/# This .gitignore file should be placed at the root of your Unity project directory
+# This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
