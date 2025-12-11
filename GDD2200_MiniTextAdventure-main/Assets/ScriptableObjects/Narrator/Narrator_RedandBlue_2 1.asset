@@ -19,15 +19,14 @@ MonoBehaviour:
     one red, one blue, they stepped through the red door excited to start their adventure."
   Choices:
   - ChoiceText: RED Door
-    NextNodeId: 
-    SceneChangeAsset: {fileID: 11400000, guid: 5fd83e6c72be12447b69812535fc19d7, type: 2}
+    NextNodeId: Chicken
+    ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []
   - ChoiceText: Blue Door
     NextNodeId: RedandBlue_3
-    SceneChangeAsset: {fileID: 0}
+    ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags:
-    - BlueDoor_2
+    GrantFlags: []

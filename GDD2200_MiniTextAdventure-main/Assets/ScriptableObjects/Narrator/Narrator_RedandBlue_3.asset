@@ -22,8 +22,7 @@ MonoBehaviour:
   Choices:
   - ChoiceText: Next
     NextNodeId: RedandBlue_3 2
-    ReloadScene: 0
-    RequiredFlags:
-    - BlueDoor_2
+    SceneChangeAsset: {fileID: 0}
+    RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []

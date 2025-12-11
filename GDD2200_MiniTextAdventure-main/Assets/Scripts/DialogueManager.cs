@@ -4,89 +4,89 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header("Data")] 
     public DialogueDatabase Database;
     public FlagManager FlagManager;
     public string StartNodeId;
 
-    public event System.Action<string,string,List<DialogueChoice>> OnDialogueUpdated;
-
-    private DialogueNode currentNode;
-
-    public string CurrentNodeId => currentNode != null ? currentNode.NodeId : null;
-
-    public bool StartedFromSave = false;
+    public delegate void DialogueUpdated(string speakerName, string dialogueText, List<DialogueChoice> choices);
+    public event DialogueUpdated OnDialogueUpdated;
+    
+    private DialogueNode _currentDialogueNode;
 
     private void Start()
     {
-        if (!StartedFromSave)
-            GoToNode(StartNodeId);
+        GoToNode(StartNodeId);
+    }
+
+    private void ReloadScene()
+    {
+        var currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
+    private bool IsChoiceAvailable(DialogueChoice choice)
+    {
+        foreach (var required in choice.RequiredFlags)
+        {
+            if (!FlagManager.HasFlag(required)) return false;
+        }
+
+        foreach (var forbidden in choice.ForbiddenFlags)
+        {
+            if (FlagManager.HasFlag(forbidden)) return false;
+        }
+        
+        return true;
+    }
+
+    private List<DialogueChoice> FilterChoices(List<DialogueChoice> choices)
+    {
+        var result = new List<DialogueChoice>();
+
+        foreach (var choice in choices)
+        {
+            if (IsChoiceAvailable(choice))
+            {
+                result.Add(choice);
+            }
+        }
+        
+        return result;
+    }
+
+    public void SelectChoice(int index)
+    {
+        var filtered = FilterChoices(_currentDialogueNode.Choices);
+        var choice = filtered[index];
+
+        foreach (var flag in choice.GrantFlags)
+        {
+            FlagManager.AddFlag(flag);
+        }
+
+        if (choice.ReloadScene)
+        {
+            ReloadScene();
+            return;
+        }
+
+        GoToNode(choice.NextNodeId);
     }
 
     public void GoToNode(string nodeId)
     {
-        currentNode = Database.GetNode(nodeId);
+        _currentDialogueNode = Database.GetNode(nodeId);
 
-        if (currentNode == null)
+        if (_currentDialogueNode == null)
         {
-            Debug.LogWarning($"Dialogue node '{nodeId}' not found.");
-            OnDialogueUpdated?.Invoke("", "[Dialogue Ended]", new List<DialogueChoice>());
+            OnDialogueUpdated?.Invoke("", "[Dialogue Ended]", null);
             return;
         }
-
-        List<DialogueChoice> filteredChoices = FilterChoices(currentNode.Choices);
-
-        OnDialogueUpdated?.Invoke(
-            currentNode.SpeakerName,
-            currentNode.DialogueText,
-            filteredChoices
-        );
-    }
-
-    private List<DialogueChoice> FilterChoices(List<DialogueChoice> all)
-    {
-        List<DialogueChoice> outList = new List<DialogueChoice>();
-
-        foreach (var c in all)
+        
+        var filtered = FilterChoices(_currentDialogueNode.Choices);
         {
-            if (IsAvailable(c))
-                outList.Add(c);
+            OnDialogueUpdated?.Invoke(_currentDialogueNode.SpeakerName, _currentDialogueNode.DialogueText, filtered);
         }
-
-        return outList;
-    }
-
-    private bool IsAvailable(DialogueChoice choice)
-    {
-        foreach (var req in choice.RequiredFlags)
-            if (!FlagManager.HasFlag(req))
-                return false;
-
-        foreach (var forb in choice.ForbiddenFlags)
-            if (FlagManager.HasFlag(forb))
-                return false;
-
-        return true;
-    }
-
-    public void SelectChoice(DialogueChoice choice)
-    {
-        // Grant flags
-        foreach (var flag in choice.GrantFlags)
-            FlagManager.AddFlag(flag);
-
-        // Scene change?
-        if (choice.SceneChangeAsset != null)
-        {
-            var s = choice.SceneChangeAsset;
-
-            if (s.SaveFlagsBeforeLeaving)
-                JsonSaveSystem.Save(FlagManager, CurrentNodeId);
-
-            SceneManager.LoadScene(s.SceneName);
-            return;
-        }
-
-        // Continue dialogue
-        GoToNode(choice.NextNodeId);
     }
 }

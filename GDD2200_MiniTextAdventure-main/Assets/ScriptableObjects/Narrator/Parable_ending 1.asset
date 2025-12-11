@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: Desc RedandBlue_2
+  m_Name: Parable_ending 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: RedandBlue_2
+  NodeId: Chicken
   SpeakerName: Desc
-  DialogueText: You walk through the blue door, into an identical room. Presented
-    with once again a red and blue door.
+  DialogueText: A test
   Choices:
-  - ChoiceText: Next
-    NextNodeId: RedandBlue_2 1
+  - ChoiceText: Did it work?
+    NextNodeId: 
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

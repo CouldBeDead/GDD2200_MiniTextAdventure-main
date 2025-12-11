@@ -21,13 +21,13 @@ MonoBehaviour:
   Choices:
   - ChoiceText: PUERTA ROJA
     NextNodeId: 
-    SceneChangeAsset: {fileID: 11400000, guid: 5fd83e6c72be12447b69812535fc19d7, type: 2}
+    ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []
   - ChoiceText: puerta azul
     NextNodeId: RedandBlue_5
-    SceneChangeAsset: {fileID: 0}
+    ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags:

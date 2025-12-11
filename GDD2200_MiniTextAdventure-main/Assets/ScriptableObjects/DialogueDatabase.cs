@@ -1,25 +1,29 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-[CreateAssetMenu(menuName = "Dialogue/Database")]
+[CreateAssetMenu(menuName = "Dialogue/DialogueDatabase")]
 public class DialogueDatabase : ScriptableObject
 {
-    public List<DialogueNode> Nodes = new List<DialogueNode>();
-    private Dictionary<string, DialogueNode> lookup;
+    public List<DialogueNode> Nodes = new();
 
-    private void OnEnable()
+    private Dictionary<string, DialogueNode> _lookup;
+
+    private void BuildNodeDictionary()
     {
-        lookup = new Dictionary<string, DialogueNode>();
+        if (_lookup != null) return;
+        _lookup = new Dictionary<string, DialogueNode>();
+
         foreach (var node in Nodes)
         {
-            if (!lookup.ContainsKey(node.NodeId))
-                lookup.Add(node.NodeId, node);
+            _lookup.Add(node.NodeId, node);
         }
     }
 
     public DialogueNode GetNode(string id)
     {
-        lookup ??= new Dictionary<string, DialogueNode>();
-        return lookup.ContainsKey(id) ? lookup[id] : null;
+        if (string.IsNullOrEmpty(id)) return null;
+        BuildNodeDictionary();
+        _lookup.TryGetValue(id, out var node);
+        return node;
     }
 }

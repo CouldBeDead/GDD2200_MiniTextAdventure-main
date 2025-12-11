@@ -960,7 +960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 268.24, y: -174.68001}
+  m_AnchoredPosition: {x: 268.24, y: -174.67998}
   m_SizeDelta: {x: 536.48, y: 41.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1126003877
@@ -1335,9 +1335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   Database: {fileID: 11400000, guid: e0e61d6039a5c5e448aec5b907a6e4c3, type: 2}
-  FlagManager: {fileID: 1189913948}
+  FlagManager: {fileID: 0}
   StartNodeId: RedandBlue_1
-  StartedFromSave: 0
 --- !u!4 &1753044070
 Transform:
   m_ObjectHideFlags: 0
@@ -1434,7 +1433,6 @@ MonoBehaviour:
   ButtonLabels:
   - {fileID: 1126003878}
   - {fileID: 314465533}
-  TypeSpeed: 0.03
 --- !u!223 &1939522764
 Canvas:
   m_ObjectHideFlags: 0
