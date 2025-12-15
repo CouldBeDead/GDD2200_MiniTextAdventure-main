@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
   m_Name: Goat_E 4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: Goat_E 3
-  SpeakerName: Narrator
-  DialogueText: Okay I will teleport you to the room you are suppost to be in.
+  NodeId: Goat_E 4
+  SpeakerName: 'Console Log:'
+  DialogueText: '<Narrator> /tp player ~ ~ ~
+
+'
   Choices:
   - ChoiceText: Next
-    NextNodeId: 
+    NextNodeId: RedandBlue_1
     ReloadScene: 0
-    RequiredFlags: []
-    ForbiddenFlags: []
-    GrantFlags:
+    RequiredFlags:
     - Truck
+    ForbiddenFlags: []
+    GrantFlags: []

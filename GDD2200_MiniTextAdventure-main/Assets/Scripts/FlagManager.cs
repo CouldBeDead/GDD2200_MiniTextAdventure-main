@@ -3,14 +3,18 @@ using System.Collections.Generic;
 
 public class FlagManager : MonoBehaviour
 {
-    // Fast lookups, no duplicates
-    private HashSet<string> _flags = new HashSet<string>();
+    private readonly HashSet<string> _flags = new HashSet<string>();
 
-    /// <summary>Adds a flag (does nothing if it already exists).</summary>
-    public void AddFlag(string flag)
+    /// <summary>Adds a flag (does nothing if it already exists). Auto-saves when newly added.</summary>
+    public void AddFlag(string flag, bool suppressSave = false)
     {
         if (string.IsNullOrWhiteSpace(flag)) return;
-        _flags.Add(flag);
+
+        bool added = _flags.Add(flag);
+        if (!added) return;
+
+        if (!suppressSave && GameManager.Instance != null)
+            GameManager.Instance.SaveNow();
     }
 
     /// <summary>Checks whether a flag is set.</summary>
@@ -20,9 +24,7 @@ public class FlagManager : MonoBehaviour
         return _flags.Contains(flag);
     }
 
-    /// <summary>Clears all flags (use if you want a fresh run).</summary>
-    public void ClearAllFlags()
-    {
-        _flags.Clear();
-    }
+    public void ClearAllFlags() => _flags.Clear();
+
+    public List<string> GetAllFlags() => new List<string>(_flags);
 }

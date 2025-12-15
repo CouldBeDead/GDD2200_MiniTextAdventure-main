@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   NodeId: Goat_E 3
   SpeakerName: Narrator
-  DialogueText: Okay I will teleport you to the room you are suppost to be in.
+  DialogueText: Okay I will teleport you to the room you are suppost to be in and
+    we will continue the plot as planned.
   Choices:
   - ChoiceText: Next
-    NextNodeId: 
+    NextNodeId: Goat_E 4
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

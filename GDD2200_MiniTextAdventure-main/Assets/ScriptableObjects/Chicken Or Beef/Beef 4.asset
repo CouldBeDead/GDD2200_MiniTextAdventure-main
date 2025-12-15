@@ -21,4 +21,5 @@ MonoBehaviour:
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags: []
+    GrantFlags:
+    - Beef

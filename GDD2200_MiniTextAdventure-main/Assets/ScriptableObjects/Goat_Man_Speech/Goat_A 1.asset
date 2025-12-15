@@ -17,8 +17,8 @@ MonoBehaviour:
   DialogueText: "And then there was this, uh\u2014this bump, man, and I swear to
     god it was shaped like a deer."
   Choices:
-  - ChoiceText: '"Are you Okay?"'
-    NextNodeId: 
+  - ChoiceText: Next
+    NextNodeId: Goat_A2
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

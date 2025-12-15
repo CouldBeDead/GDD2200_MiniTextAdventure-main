@@ -27,5 +27,6 @@ MonoBehaviour:
     NextNodeId: Beef_1
     ReloadScene: 0
     RequiredFlags: []
-    ForbiddenFlags: []
+    ForbiddenFlags:
+    - Beef
     GrantFlags: []

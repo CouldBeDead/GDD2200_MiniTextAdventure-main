@@ -29,6 +29,7 @@ MonoBehaviour:
     NextNodeId: RedandBlue_2
     ReloadScene: 0
     RequiredFlags: []
-    ForbiddenFlags: []
+    ForbiddenFlags:
+    - Reddoor
     GrantFlags:
     - Bluedoor_1
