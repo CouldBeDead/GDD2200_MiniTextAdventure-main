@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Goat_D
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Goat_D
+  SpeakerName: Desc
+  DialogueText: In the back of the truck looks like just a mess. Empty beer cans
+    everywhere, couple crushed cases stacked all crooked. There's a red trident place
+    half hazardly across the truck bed and there is a full, uneaten pie sitting besides
+    the beer.
+  Choices:
+  - ChoiceText: Look at the Trident
+    NextNodeId: Trident
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags:
+    - Trident
+    GrantFlags:
+    - Trident
+  - ChoiceText: Move on.
+    NextNodeId: Leave_Truck
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags:
+    - Leave_Truck
+  - ChoiceText: Look at the Pie
+    NextNodeId: Pie
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags:
+    - Pie
+    GrantFlags:
+    - Pie

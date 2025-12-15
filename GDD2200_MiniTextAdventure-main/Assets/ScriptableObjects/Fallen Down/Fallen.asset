@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: Desc Chicken or Beef intro
+  m_Name: Fallen
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: Chicken or Beef intro
+  NodeId: Fallen
   SpeakerName: Desc
-  DialogueText: You walk through the red door. Infront of you, you see a man standing
-    infront of a small bottemless pit with two block pillers floating above. The
-    piller to the left seems to be a meter taller than the other.
+  DialogueText: 'The world is dark...
+
+'
   Choices:
   - ChoiceText: Next
-    NextNodeId: ChickenBeef_2
+    NextNodeId: Fallen_1
     ReloadScene: 0
     RequiredFlags:
-    - Reddoor
+    - Beef
     ForbiddenFlags: []
     GrantFlags: []

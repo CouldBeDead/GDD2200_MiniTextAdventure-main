@@ -19,14 +19,16 @@ MonoBehaviour:
     one red, one blue, they stepped through the red door excited to start their adventure."
   Choices:
   - ChoiceText: RED Door
-    NextNodeId: Chicken
+    NextNodeId: Chicken or Beef intro
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags: []
+    GrantFlags:
+    - Reddoor
   - ChoiceText: Blue Door
     NextNodeId: RedandBlue_3
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags: []
+    GrantFlags:
+    - BlueDoor2

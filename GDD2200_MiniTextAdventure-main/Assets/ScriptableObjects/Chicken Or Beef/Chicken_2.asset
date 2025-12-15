@@ -10,23 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: Narrator_RedandBlue_3 1
+  m_Name: Chicken_2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: RedandBlue_3 2
-  SpeakerName: Narrator
-  DialogueText: "From the top now. \r\nWith the player faced with two doors, one
-    red, one blue, they stepped through the red door excited to start their adventure.\r\n"
+  NodeId: Chicken_2
+  SpeakerName: Desc
+  DialogueText: 'Landing on the piller, you look at the ground to see a entire raw
+    chicken sitting there. You pick it up
+
+'
   Choices:
-  - ChoiceText: Red Door
-    NextNodeId: Chicken or Beef intro
+  - ChoiceText: Next
+    NextNodeId: Chicken_3
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags:
-    - Reddoor
-  - ChoiceText: Blue Door
-    NextNodeId: RedandBlue_4
-    ReloadScene: 0
-    RequiredFlags: []
-    ForbiddenFlags: []
-    GrantFlags: []
+    - Chicken

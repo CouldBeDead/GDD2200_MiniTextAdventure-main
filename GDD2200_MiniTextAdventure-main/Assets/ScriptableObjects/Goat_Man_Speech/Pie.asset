@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: Narrator_RedandBlue_3 1
+  m_Name: Pie
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: RedandBlue_3 2
-  SpeakerName: Narrator
-  DialogueText: "From the top now. \r\nWith the player faced with two doors, one
-    red, one blue, they stepped through the red door excited to start their adventure.\r\n"
+  NodeId: Pie
+  SpeakerName: Desc
+  DialogueText: You take a closer look at the pie... It smells of Butterscotch
   Choices:
-  - ChoiceText: Red Door
-    NextNodeId: Chicken or Beef intro
+  - ChoiceText: Pick up Pie
+    NextNodeId: Pie 2
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags:
-    - Reddoor
-  - ChoiceText: Blue Door
-    NextNodeId: RedandBlue_4
+    GrantFlags: []
+  - ChoiceText: Move on.
+    NextNodeId: Goat_D
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

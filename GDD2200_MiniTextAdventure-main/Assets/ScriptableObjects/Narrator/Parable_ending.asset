@@ -17,8 +17,9 @@ MonoBehaviour:
   DialogueText: You wait in the room for something to happen...
   Choices:
   - ChoiceText: Wait
-    NextNodeId: 
-    SceneChangeAsset: {fileID: 11400000, guid: 0d087c85c51c6134eb1a177618c7bf02, type: 2}
-    RequiredFlags: []
+    NextNodeId: Parable Ending
+    ReloadScene: 0
+    RequiredFlags:
+    - BlueDoor4
     ForbiddenFlags: []
     GrantFlags: []

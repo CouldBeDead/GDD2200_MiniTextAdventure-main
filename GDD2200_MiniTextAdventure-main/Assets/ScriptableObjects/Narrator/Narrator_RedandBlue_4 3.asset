@@ -20,15 +20,16 @@ MonoBehaviour:
     roja y otra azul, cruz\xF3 la puerta ROJA, entusiasmado por comenzar su aventura.\n"
   Choices:
   - ChoiceText: PUERTA ROJA
-    NextNodeId: 
+    NextNodeId: Chicken or Beef intro
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags: []
+    GrantFlags:
+    - Reddoor
   - ChoiceText: puerta azul
     NextNodeId: RedandBlue_5
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags:
-    - BlueDoor_4
+    - BlueDoor4
