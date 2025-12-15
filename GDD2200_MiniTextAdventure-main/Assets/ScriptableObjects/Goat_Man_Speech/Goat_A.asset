@@ -16,8 +16,8 @@ MonoBehaviour:
   SpeakerName: Goat Man
   DialogueText: "I was\u2026 drivin\u2019 my car\u2014right after a beer..."
   Choices:
-  - ChoiceText: '"Are you Okay?"'
-    NextNodeId: 
+  - ChoiceText: Next
+    NextNodeId: Goat_A1
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

@@ -21,7 +21,8 @@ MonoBehaviour:
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags: []
+    GrantFlags:
+    - Pie
   - ChoiceText: Move on.
     NextNodeId: Goat_D
     ReloadScene: 0

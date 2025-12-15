@@ -20,7 +20,7 @@ MonoBehaviour:
     the beer.
   Choices:
   - ChoiceText: Look at the Trident
-    NextNodeId: Trident
+    NextNodeId: Trident_1
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags:
@@ -28,7 +28,7 @@ MonoBehaviour:
     GrantFlags:
     - Trident
   - ChoiceText: Move on.
-    NextNodeId: Leave_Truck
+    NextNodeId: Goat_E
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
@@ -39,6 +39,6 @@ MonoBehaviour:
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags:
-    - Pie
+    - Pie_look
     GrantFlags:
-    - Pie
+    - Pie_look

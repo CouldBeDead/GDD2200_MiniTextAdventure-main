@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: And... like yeah, now we here.
   Choices:
   - ChoiceText: Next
-    NextNodeId: Goat_A4
+    NextNodeId: Goat_C
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

@@ -14,28 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   NodeId: Goat_E
   SpeakerName: Desc
-  DialogueText: You move
+  DialogueText: You start to walk away from the Truck...
   Choices:
-  - ChoiceText: Look at the Trident
-    NextNodeId: Trident
-    ReloadScene: 0
-    RequiredFlags: []
-    ForbiddenFlags:
-    - Trident
-    GrantFlags:
-    - Trident
-  - ChoiceText: Move on.
-    NextNodeId: Leave_Truck
+  - ChoiceText: Next
+    NextNodeId: Goat_E 1
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags:
-    - Leave_Truck
-  - ChoiceText: Look at the Pie
-    NextNodeId: Pie
-    ReloadScene: 0
-    RequiredFlags: []
-    ForbiddenFlags:
-    - Pie
-    GrantFlags:
-    - Pie
+    - Truck

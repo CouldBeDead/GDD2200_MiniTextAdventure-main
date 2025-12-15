@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: '*He starts waving his arms up and down*'
   Choices:
   - ChoiceText: Next
-    NextNodeId: 
+    NextNodeId: Goat_C
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

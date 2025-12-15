@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
   m_Name: Goat_C 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: Goat_C
+  NodeId: Goat_C 1
   SpeakerName: Desc
   DialogueText: Looking at the truck, you see that there is stuff in the back of
     his truck...
   Choices:
-  - ChoiceText: Look at the back
-    NextNodeId: 
+  - ChoiceText: Look in the back
+    NextNodeId: Goat_D
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []
   - ChoiceText: Move on.
-    NextNodeId: 
+    NextNodeId: Goat_E
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []

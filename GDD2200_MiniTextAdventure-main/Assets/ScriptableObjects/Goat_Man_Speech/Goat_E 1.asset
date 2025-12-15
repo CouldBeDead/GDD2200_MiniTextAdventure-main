@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: Goat_A 1
+  m_Name: Goat_E 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: Goat_A1
-  SpeakerName: Goat Man
-  DialogueText: "And then there was this, uh\u2014this bump, man, and I swear to
-    god it was shaped like a deer."
+  NodeId: Goat_E 1
+  SpeakerName: Narrator
+  DialogueText: Oh my... There you are.
   Choices:
-  - ChoiceText: '"Are you Okay?"'
-    NextNodeId: 
+  - ChoiceText: Next
+    NextNodeId: Goat_E 2
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags: []
+    GrantFlags:
+    - Truck

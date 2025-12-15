@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   NodeId: Trident_3
   SpeakerName: Desc
-  DialogueText: It's too heavy
+  DialogueText: It's too heavy.
   Choices:
   - ChoiceText: Move on.
     NextNodeId: Goat_D

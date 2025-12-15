@@ -17,7 +17,7 @@ MonoBehaviour:
   DialogueText: Thinking of how to respond. The goat man passes out again
   Choices:
   - ChoiceText: Next
-    NextNodeId: 
+    NextNodeId: Goat_C 1
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
