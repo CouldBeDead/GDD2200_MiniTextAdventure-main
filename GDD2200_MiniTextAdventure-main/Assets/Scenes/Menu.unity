@@ -563,7 +563,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <Dialogue Text>
+  m_text: "Main Menu Subtext:\n\u2022 This experience may end abruptly\n\u2022 Your
+    choices matter until they don\u2019t\n\u2022 Some features are \u201Ccoming soon\u201D
+    emotionally\n\u2022 Please do not microwave the developers\n\u2022 Thank you
+    for pretending this is finished \n->Make Sure To Remove This Developer Text<-\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -827,7 +830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <Speaker>
+  m_text: Choose Your Own Adventure Demo_1 *Replace with Title Here*
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

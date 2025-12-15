@@ -10,19 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: Jamie_DeathD
+  m_Name: Show_Pie 20
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: Jamie_DeathD
+  NodeId: Show_Pie 20
   NodeType: 0
-  SpeakerName: Jamie Olive Oil
-  DialogueText: 'Now for your final sco- kuhh-
+  SpeakerName: Narrator
+  DialogueText: 'Congratulations!
 
-'
+
+    You did it.
+
+
+    Against all expectations,
+    logic, and several very loud warnings, you reached the end. You navigated the
+    rooms, ignored perfectly reasonable advice, microwaved a pie, and impressed a
+    man legally named Jamie Olive Oil. That alone is an achievement few can claim.'
   Choices:
   - ChoiceText: Next
-    NextNodeId: Jamie_Death D1
+    NextNodeId: Show_Pie 21
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags:
-    - Jamie_Dead
+    GrantFlags: []

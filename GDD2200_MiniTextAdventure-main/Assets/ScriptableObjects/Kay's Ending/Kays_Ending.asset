@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
   m_Name: Kays_Ending
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: Parable Ending
+  NodeId: Kays Ending
   NodeType: 0
-  SpeakerName: Parable Ending
-  DialogueText: You got the parable ending!
+  SpeakerName: Kay's Ending
+  DialogueText: You got Kay's Ending!
   Choices:
   - ChoiceText: Return To Main Menu
     NextNodeId: Main Menu

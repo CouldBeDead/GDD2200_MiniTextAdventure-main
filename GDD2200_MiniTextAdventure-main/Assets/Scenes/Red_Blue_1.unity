@@ -1677,6 +1677,7 @@ MonoBehaviour:
   - {fileID: 1126003878}
   - {fileID: 314465533}
   - {fileID: 1586090658}
+  TypingSpeed: 0.02
 --- !u!223 &1939522764
 Canvas:
   m_ObjectHideFlags: 0

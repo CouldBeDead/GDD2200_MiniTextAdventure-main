@@ -10,33 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
-  m_Name: ShowC
+  m_Name: Show_Pie 14
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
-  NodeId: ShowC
+  NodeId: Show_Pie 14
   NodeType: 0
   SpeakerName: Jamie Olive Oil
-  DialogueText: Conestant, what will you be cooking for us today?
+  DialogueText: "Crisp pastry. Silky filling. Warm all the way through. I don\u2019t
+    know what culinary school tells you\u2026 but this\u2014this is comfort."
   Choices:
-  - ChoiceText: '"Chicken"'
-    NextNodeId: Show_Chicken
+  - ChoiceText: Next
+    NextNodeId: Show_Pie 15
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
-    GrantFlags:
-    - Show_Chicken
-  - ChoiceText: '"Beef"'
-    NextNodeId: Show_Beef
-    ReloadScene: 0
-    RequiredFlags:
-    - Beef
-    ForbiddenFlags: []
-    GrantFlags:
-    - Show_Beef
-  - ChoiceText: '"Pie"'
-    NextNodeId: Show_Pie
-    ReloadScene: 0
-    RequiredFlags:
-    - Pie
-    ForbiddenFlags: []
-    GrantFlags:
-    - Show_Pie
+    GrantFlags: []

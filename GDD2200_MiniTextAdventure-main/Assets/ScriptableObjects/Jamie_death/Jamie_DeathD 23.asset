@@ -22,8 +22,15 @@ MonoBehaviour:
     this platform."
   Choices:
   - ChoiceText: ...
-    NextNodeId: 
+    NextNodeId: Kay's Ending
     ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []
+  - ChoiceText: ...
+    NextNodeId: Kay's Ending
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags:
+    - Kays_Ending
