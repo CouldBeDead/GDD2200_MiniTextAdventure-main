@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Jamie_DeathA 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Jamie_Death A 1
+  NodeType: 0
+  SpeakerName: Jamie
+  DialogueText: " Ah! Well\u2026 look at this! Our Contestant has presented us with\u2026
+    their grilled chicken dish. How\u2026 delightful!\r\n Yes, I can certainly see
+    the effort put into this. The char marks are-well, they\u2019re definitely present-and
+    there\u2019s a very\u2026 bold smokiness happening here. Quite bold indeed.\r\n"
+  Choices:
+  - ChoiceText: Next
+    NextNodeId: Jamie_Death A 2
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Jamie_DeathD 10
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Jamie_Death D10
+  NodeType: 0
+  SpeakerName: Narrator
+  DialogueText: "This is not good, it is strictly against YouTube\u2019s TOS to show
+    dead bodies on their platform. \u201CGraphic content\u201D and \u201Cplease don\u2019t
+    traumatize children, Mr. Paul,\u201D blah blah blah\u2026\r\n"
+  Choices:
+  - ChoiceText: ...
+    NextNodeId: Jamie_Death D11
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []

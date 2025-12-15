@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Parable_Description
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   NodeId: Parable Ending
+  NodeType: 0
   SpeakerName: Parable Ending
-  DialogueText: You got the parable ending
+  DialogueText: You got the parable ending!
   Choices:
-  - ChoiceText: Back2Start
-    NextNodeId: 
-    SceneChangeAsset: {fileID: 11400000, guid: aed799aa554229a4d975fb6d900e167d, type: 2}
+  - ChoiceText: Return To Main Menu
+    NextNodeId: Main Menu
+    ReloadScene: 0
     RequiredFlags: []
     ForbiddenFlags: []
     GrantFlags: []

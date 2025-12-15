@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: MeatBalls 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: MeatBalls 1
+  NodeType: 0
+  SpeakerName: Jamie Olive Oil
+  DialogueText: "When done properly, meatballs are little miracles of the kitchen:
+    beautifully browned on the outside, juicy and tender on the inside, each one
+    sealing in a rich, savory burst of flavor. It\u2019s a careful balance of heat,
+    seasoning, and timing, and one wrong move can turn a masterpiece into a dry,
+    tragic sphere\u2026 but I believe our Contestant knows exactly what they\u2019re
+    doing!"
+  Choices:
+  - ChoiceText: Next
+    NextNodeId: MeatBalls 2
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []

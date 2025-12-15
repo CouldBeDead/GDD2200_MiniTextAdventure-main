@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Jamie_DeathD 5
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Jamie_Death D5
+  NodeType: 0
+  SpeakerName: Narrator
+  DialogueText: 'Maybe serving a piece of raw meat we found on the floor to a celebrity
+    chef live in front of a live audience is not the best idea.
+
+'
+  Choices:
+  - ChoiceText: ...
+    NextNodeId: Jamie_Death D6
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []

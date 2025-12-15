@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Show_ChickenC 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Show_ChickenC 1
+  NodeType: 0
+  SpeakerName: Narrator
+  DialogueText: "Looking around the kitchen, the player saw a grill and a deep fry\u2019er.
+    Knowing that the great Jamie Olive Oil likes his chicken fried, our player, faced
+    with the two possible options, decided to fry his chicken."
+  Choices:
+  - ChoiceText: '"Fried Chicken"'
+    NextNodeId: Fried_Chicken
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags:
+    - Fried Chicken
+  - ChoiceText: '"Grilled Chicken"'
+    NextNodeId: Grill_Chicken
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags:
+    - Grilled Chicken

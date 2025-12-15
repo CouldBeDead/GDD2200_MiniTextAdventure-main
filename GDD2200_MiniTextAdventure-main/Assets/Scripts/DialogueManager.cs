@@ -9,10 +9,13 @@ public class DialogueManager : MonoBehaviour
     public FlagManager FlagManager;
     public string StartNodeId;
 
+    [Header("Scenes")]
+    public string MenuSceneName = "MainMenu";
+
     public delegate void DialogueUpdated(string speakerName, string dialogueText, List<DialogueChoice> choices);
     public event DialogueUpdated OnDialogueUpdated;
 
-    // IMPORTANT: set true when loading so Start() doesn't override the loaded node
+    // Set true when loading a save so Start() doesn't override the loaded node
     public bool SuppressAutoStart = false;
 
     private DialogueNode _currentDialogueNode;
@@ -31,9 +34,13 @@ public class DialogueManager : MonoBehaviour
 
     private bool IsChoiceAvailable(DialogueChoice choice)
     {
+        if (choice == null) return false;
+
+        // Required flags must all be present
         foreach (var required in choice.RequiredFlags)
             if (!FlagManager.HasFlag(required)) return false;
 
+        // Forbidden flags must all be absent
         foreach (var forbidden in choice.ForbiddenFlags)
             if (FlagManager.HasFlag(forbidden)) return false;
 
@@ -43,9 +50,12 @@ public class DialogueManager : MonoBehaviour
     private List<DialogueChoice> FilterChoices(List<DialogueChoice> choices)
     {
         var result = new List<DialogueChoice>();
+        if (choices == null) return result;
+
         foreach (var choice in choices)
             if (IsChoiceAvailable(choice))
                 result.Add(choice);
+
         return result;
     }
 
@@ -54,23 +64,37 @@ public class DialogueManager : MonoBehaviour
         if (_currentDialogueNode == null) return;
 
         var filtered = FilterChoices(_currentDialogueNode.Choices);
-        if (index < 0 || index >= filtered.Count) return;
+        if (index < 0 || index >= filtered.Count)
+        {
+            Debug.LogWarning($"DialogueManager.SelectChoice: Invalid index {index}.");
+            return;
+        }
 
         var choice = filtered[index];
 
-        foreach (var flag in choice.GrantFlags)
-            FlagManager.AddFlag(flag);
+        // Grant flags (auto-saves via FlagManager when newly added)
+        if (choice.GrantFlags != null)
+        {
+            foreach (var flag in choice.GrantFlags)
+                FlagManager.AddFlag(flag);
+        }
 
+        // Reload current scene
         if (choice.ReloadScene)
         {
             ReloadScene();
             return;
         }
 
+        // Go to next node
         if (!string.IsNullOrWhiteSpace(choice.NextNodeId))
+        {
             GoToNode(choice.NextNodeId);
-        else
-            OnDialogueUpdated?.Invoke("", "[Dialogue Ended]", null);
+            return;
+        }
+
+        // No next node -> end
+        OnDialogueUpdated?.Invoke("", "[Dialogue Ended]", null);
     }
 
     public void GoToNode(string nodeId)
@@ -81,11 +105,24 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        if (string.IsNullOrWhiteSpace(nodeId))
+        {
+            OnDialogueUpdated?.Invoke("", "[Dialogue Ended]", null);
+            return;
+        }
+
         _currentDialogueNode = Database.GetNode(nodeId);
 
         if (_currentDialogueNode == null)
         {
             OnDialogueUpdated?.Invoke("", "[Dialogue Ended]", null);
+            return;
+        }
+
+        // Special node type: return to menu
+        if (_currentDialogueNode.NodeType == DialogueNodeType.ReturnToMenu)
+        {
+            SceneManager.LoadScene(MenuSceneName);
             return;
         }
 

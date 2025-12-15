@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Jamie_DeathD 16
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Jamie_Death D16
+  NodeType: 0
+  SpeakerName: Narrator
+  DialogueText: " And if they flag us, Steam will freak out and blacklist the entire
+    game!\r\n Oh no. Oh no no no."
+  Choices:
+  - ChoiceText: ...
+    NextNodeId: Jamie_Death D17
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []

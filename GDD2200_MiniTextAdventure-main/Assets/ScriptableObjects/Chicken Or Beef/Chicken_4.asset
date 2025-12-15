@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Chicken_4
   m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
   NodeId: Chicken_4
+  NodeType: 0
   SpeakerName: Narrator
   DialogueText: "As the player successfully landed on the block, they saw that up
     ahead there was a hallway labeled \u201CKitchen\u201D. Wanting to not waste this
     perfectly good chicken, the player walked into the kitchen looking to cook it.\n"
   Choices:
   - ChoiceText: Go to Kitchen
-    NextNodeId: 
+    NextNodeId: Show
     ReloadScene: 0
     RequiredFlags:
     - Chicken

@@ -1,35 +1,45 @@
 using UnityEngine;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+
+public enum DialogueNodeType
+{
+    Normal,
+    ReturnToMenu
+}
 
 [CreateAssetMenu(menuName = "Dialogue/DialogueNode")]
 public class DialogueNode : ScriptableObject
 {
-    [Header("Identity")] 
-    public string NodeId;  // speaker_01_descriptor
+    [Header("Identity")]
+    public string NodeId;  // e.g. "ending_return_to_menu"
 
-    [Header("Dialogue")] 
+    [Header("Type")]
+    public DialogueNodeType NodeType = DialogueNodeType.Normal;
+
+    [Header("Dialogue")]
     public string SpeakerName;
-    [TextArea(2, 5)] 
+
+    [TextArea(2, 5)]
     public string DialogueText;
 
-    [Header("Choices")] 
+    [Header("Choices")]
     public List<DialogueChoice> Choices = new();
 }
 
 [System.Serializable]
 public class DialogueChoice
 {
-    [Header("UI")] 
+    [Header("UI")]
     public string ChoiceText;
 
-    [Header("Flow")] 
+    [Header("Flow")]
     public string NextNodeId;
     public bool ReloadScene;
 
-    [Header("Conditions")] 
+    [Header("Conditions")]
     public List<string> RequiredFlags = new();
     public List<string> ForbiddenFlags = new();
-    
+
     [Header("Flags On Select")]
     public List<string> GrantFlags = new();
 }

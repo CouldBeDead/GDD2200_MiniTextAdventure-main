@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Jamie_DeathB 2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Jamie_Death B2
+  NodeType: 0
+  SpeakerName: Jamie Olive Oil
+  DialogueText: "\u201COh\u2026 oh my. Contestant\u2026 this is marvelous!\nThe crust\u2014perfectly
+    golden, beautifully crisp. The interior\u2014juicy, tender, seasoned with surprising
+    confidence. This isn\u2019t just a cooked dish\u2026 this is artistry!\nYou\u2019ve
+    balanced texture and flavor with the skill of a seasoned chef. I must say, I
+    am thoroughly impressed. If this is the level of talent you bring to the kitchen,
+    the audience may need to brace themselves for a culinary revolution.\u201D"
+  Choices:
+  - ChoiceText: Next
+    NextNodeId: Jamie_Death B3
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []

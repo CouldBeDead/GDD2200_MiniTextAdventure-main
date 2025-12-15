@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669b2765012dcf0419ac8691d2bbba10, type: 3}
+  m_Name: Show_BeefA 1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueNode
+  NodeId: Show_BeefA 1
+  NodeType: 0
+  SpeakerName: Narrator
+  DialogueText: "Yes, yes, \u201Ctrying your best.\u201D A classic backup strategy
+    for people who burn water. But credit where it\u2019s due - at least you\u2019re
+    admitting your limitations this time. Growth! Progress! Character development!
+    How delightful.\r\n Now let\u2019s see if your \u201Cbest\u201D can actually
+    save you\u2026 or whether the kitchen staff should bring out the fire extinguisher
+    preemptively.\r\n"
+  Choices:
+  - ChoiceText: Next
+    NextNodeId: Show_BeefC
+    ReloadScene: 0
+    RequiredFlags: []
+    ForbiddenFlags: []
+    GrantFlags: []

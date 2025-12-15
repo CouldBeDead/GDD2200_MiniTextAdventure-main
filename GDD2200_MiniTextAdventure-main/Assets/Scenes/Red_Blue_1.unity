@@ -1577,6 +1577,8 @@ MonoBehaviour:
   Database: {fileID: 11400000, guid: e0e61d6039a5c5e448aec5b907a6e4c3, type: 2}
   FlagManager: {fileID: 1189913948}
   StartNodeId: RedandBlue_1
+  MenuSceneName: Menu
+  SuppressAutoStart: 0
 --- !u!4 &1753044070
 Transform:
   m_ObjectHideFlags: 0
